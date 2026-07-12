@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef2f7;
+}
+
+/* Container section to center the form on the page */
+.create-post-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh;
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #fafafa;
+}
+
+/* Bigger and bolder heading */
+.create-post-section h1 {
+  font-size: 32px;         /* Increased from 24px */
+  font-weight: 800;         /* Extra bold */
+  letter-spacing: -0.5px;
+  color: #1a1a1a;
+  margin-bottom: 32px;
+}
+
+/* Expanded card layout */
+.create-post-section form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;         /* Expanded width from 400px */
+  background: #ffffff;
+  padding: 40px;            /* Increased padding for more breathing room */
+  border: 2px solid #e1e1e1; /* Slightly thicker border */
+  border-radius: 12px;       /* Softer corners */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* Stronger shadow */
+}
+
+/* Increased spacing between elements */
+.create-post-section form > * {
+  margin-bottom: 24px;
+}
+
+/* Thicker, more prominent file input */
+.create-post-section input[type="file"] {
+  padding: 16px;            /* Taller spacing */
+  border: 2px dashed #0095f6;
+  border-radius: 6px;
+  background-color: #f0f8ff;
+  cursor: pointer;
+  font-size: 16px;          /* Bigger font size */
+  font-weight: 600;         /* Bolder text */
+  color: #0095f6;
+}
+
+/* Bigger caption text input */
+.create-post-section input[type="text"] {
+  padding: 16px;            /* Increased padding */
+  border: 2px solid #dbdbdb;
+  border-radius: 6px;
+  font-size: 16px;          /* Bigger text input */
+  font-weight: 500;
+  background-color: #fafafa;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Enhanced focus state */
+.create-post-section input[type="text"]:focus {
+  border-color: #1a1a1a;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05); /* Soft outer focus ring */
+}
+
+/* Larger, bold primary submit button */
+.create-post-section button[type="submit"] {
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 16px;            /* Extra padding for a chunkier button */
+  font-size: 16px;
+  font-weight: 700;         /* Bold button text */
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-bottom: 0; 
+}
+
+/* Dynamic hover effect */
+.create-post-section button[type="submit"]:hover {
+  background-color: #1877f2;
+}
+
+.create-post-section button[type="submit"]:active {
+  transform: scale(0.98);    /* Slight press-down effect on click */
+}
+
+
+/* Feed Container setup */
+.feed-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  background-color: #fafafa;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Post Card Layout */
+.feed-action .post-card {
+  width: 100%;
+  max-width: 500px; /* Aligns perfectly with the larger Create Post card size */
+  background: #ffffff;
+  border: 2px solid #e1e1e1;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  overflow: hidden; /* Ensures the image respects the border-radius corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Make sure the image spans the card and maintains its aspect ratio */
+.feed-action .post-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-bottom: 2px solid #e1e1e1; /* Visual separator between image and caption */
+}
+
+/* Caption styling - bold and spacious */
+.feed-action .post-card p {
+  padding: 20px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700; /* Bold typography matching your aesthetic */
+  color: #1a1a1a;
+  line-height: 1.5;
+  text-transform: uppercase; /* Optional: forces the bold capsule text style */
+  letter-spacing: -0.5px;
+}
+
+/* Fallback state when there are no posts */
+.feed-action .no-posts {
+  font-size: 24px;
+  font-weight: 800;
+  color: #a8a8a8;
+  margin-top: 60px;
+}
